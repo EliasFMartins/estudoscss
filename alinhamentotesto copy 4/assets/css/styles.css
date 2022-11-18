@@ -1,0 +1,21 @@
+*{
+  padding: 0;
+  margin: 0px;
+  box-sizing: border-box;
+}
+header{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 10vh;
+  background-color: royalblue;
+  visibility: visible;
+}
+header h1{
+  display: block;
+}
+span{
+ align-items: center;
+}
