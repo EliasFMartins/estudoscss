@@ -1,0 +1,108 @@
+*{
+  padding: 0;
+  margin: 0px;
+  box-sizing: border-box;
+}
+a{
+  color: black;
+  text-decoration: none;
+  font-family:  sans-serif;
+  display: block;
+ 
+}
+a:hover{
+  background-color: lightgray;
+}
+#logo{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#header{
+  height: 70px;
+  width: 100vw;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* space-between separa a logo dos intes do menu  */
+  background-color: #e7e7e7;
+ 
+}
+#menu{
+  display: flex;
+  list-style: none;
+  gap: 0.5em;
+}
+#menu a {
+  padding: .5em;
+  /*padding para almentar a area de contato caso seja um usuario mobile  */
+}
+#btn-mobile{
+  display: none;
+  /* botão ficara escondido ate q  atinga o comprimento minimo */
+}
+@media (max-width: 600px){
+  /* configuração e valia ate 600px  */
+  #btn-mobile{
+    display: block;
+  }
+  #menu{
+    display: block;
+    position: absolute;
+    /* vai ficar por cima de qualquer coisa  */
+    width: 100%;
+    top: 70px;
+    /* 70px e a aultura do cabeçalho do menu logo ele vai aparecer abaixo  */
+    right: 0px;
+    background-color: #e7e7e7;
+    /* display: block; */
+    /* para cada item ficar em sua linha  */
+    height: 0px;
+    z-index: 1000;
+    transition: 0.6s;
+    visibility: hidden;
+    overflow-y: hidden;
+    /* para garantir q caso haja outros elementos abaixo ele vai ficar acima deles */
+  }
+  #nav.active #menu{
+    /* display: block; */
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+    /* caso tenha mais itens q o menur possa exibir vai have um overflow  */
+    /* calc para  subitrair e não sobrar  tele e dar overflow  */
+    /* para ocupar a altura de 100% da tela  */
+  }
+  #menu a {
+    text-align: center;
+    border-bottom: 2px solid lightblue;
+    padding: 1em auto;
+    transition: 0.6s;
+  }
+  #menu a:hover{
+    border-bottom-width: 10px;
+  }
+  #btn-mobile {
+    display: flex;
+    /* para poder alinha o escrito ao lado doque estou criando  */
+    padding: .9em 1em;
+    font-size: 1em;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+  #hamburger{
+    border-top: 2px solid black;
+    width: 20px;
+  }
+  #hambuger::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: blue;
+  }
+  
+}
