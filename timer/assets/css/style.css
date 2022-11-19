@@ -1,0 +1,136 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: calc(100vh - 250px);
+}
+main{
+  display: flex;
+  justify-content:center;
+  gap: 10px;
+  align-items: center;
+  max-width: 600px;
+  max-height: 600px;
+  min-width: 400px;
+  
+  
+}
+h1{
+  text-align: center;
+}
+div{
+  
+  height: 30vh;
+  width: 20vw;
+  margin: 15px;
+  
+  text-align: center;
+}
+main{
+  position: relative;
+  height: calc(100vh - 250px);
+  background-image: linear-gradient(rgb(3, 102, 97),rgb(64, 3, 161),yellow);
+  width: 100vw;
+  border-radius: 15px;
+  border: solid 2px;
+  box-shadow: 2px 2px 1px 2px rgba(173, 216, 230, 0.89);
+}
+div.horas{
+  border-radius: 12px;
+  border: solid 2px;
+  background-color: cornflowerblue;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9em;
+  padding: 5px;
+  min-width: 150px;
+}
+.timeH{
+  display: flex;
+  height: 70%;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  border-radius: 12px;
+  border: solid 2px;
+  font-size: 3em;
+}
+div.minutos{
+  border-radius: 12px;
+  border: solid 2px;
+  background-color: steelblue;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9em;  
+  padding: 5px;
+  min-width: 150px;
+}
+.timeM{
+  display: flex;
+  height: 70%;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  border-radius: 12px;
+  border: solid 2px;
+  font-size: 3em;
+}
+
+div.segundos{
+  border-radius: 12px;
+  border: solid 2px;
+  background-color: darkcyan;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  font-size: 0.9em;
+  min-width: 150px;
+}
+.timeS{
+  display: flex;
+  height: 70%;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  border-radius: 12px;
+  border: solid 2px;
+  font-size: 3em;
+}
+@media (max-width: 600px){
+  h1{
+    margin-top: 55px;
+  }
+  body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+  }
+  main{
+     
+    max-width: 400;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 150vw;
+    transition: 1s;
+  }
+
+}

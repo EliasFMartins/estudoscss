@@ -50,7 +50,15 @@ nav{
   #btn-menu{
     visibility: visible;
     margin-right: 30px;
+    padding: 5px 5px ;
+    color: rgba(20, 67, 220, 0.596);
+    border-color: transparent;
+    border-bottom-color: blue;
+    transition: 1s;
+    
   }
+
+  
   ul{
     display: none;
   }
@@ -70,34 +78,74 @@ nav{
     display: block;
     padding: auto ;
     border-bottom: solid 2px rgb(4, 113, 156);
-   align-items: center;
+    align-items: center;
   }
   /* nav.active a{
     display: block;
     justify-content: center;
   } */
 
-  nav.active button#btn-menu {
+  nav button#btn-menu {
     background:transparent;
     border: none;
     color: transparent;
   }
-  nav.active #x{
+  nav #x.open{
+    /* span n */
+    /* position: absolute; */
+    /* right: 1px; */
+    display: inline-block;
     content: '';
-    height: 1px;
-    width: 200px;
+    height: 2px;
+    width: 30px;
     border-top: 2px solid black;
-    z-index: 100000000000000000000000000000000000000000000;
+    /* transition: 1s; */
   }
-  nav.active #x::after,nav.active #x::before{
+  nav #x.open::after,nav #x.open::before{
+    
+    margin: 0;
+    display: inline-block;
     content: '';
-    width: 20px;
-    height: 10px;
+    width: 30px;
+    height: 2px;
     background-color: #000000;
-    z-index: 5000;
+    transition: 2s;
+  }
+  nav.active #x{
+    /* span n */
+    position: absolute;
+    right: 1px;
+    display: inline-block;
+    content: '';
+    height: 2px;
+    width: 30px;
+    border-top: 2px solid ;
     
   }
-  
+  nav.active #x::after{
+    border-radius: 50%;
+    padding: 2px;
+    position: absolute;
+    right: 33px;
+    top: -7px;
+    transform: rotate(405deg);
+    margin: 0;
+    display: inline-block;
+    content: '';
+    width: 33px;
+    height: 2px;
+    background-color: #000000;
+    transition: 2s;
+  }
+  nav.active #x::before{
+    padding: 2px;
+    right: 33px;
+    border-radius: 50%;
+    position: absolute;
+    top: -7px;
+    transform: rotate(-405deg);
+    transition: 2s;
+  }
 }
   
 /* 
