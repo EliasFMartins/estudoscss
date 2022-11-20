@@ -64,7 +64,7 @@ nav{
   }
   nav.active ul{
   width: 100vw;
-
+  transition: 2s;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -74,11 +74,13 @@ nav{
   left: 0px;
   }
   nav.active li a{
+    height: 30px;
     padding-top: 5px;
     display: block;
     padding: auto ;
     border-bottom: solid 2px rgb(4, 113, 156);
     align-items: center;
+    justify-content: space-between;
   }
   /* nav.active a{
     display: block;
